@@ -16,4 +16,5 @@ jobs:
       - name: Installing catalyst
         run : npm i -g zcatalyst-cli
       - name: Deploying code to catalyst
+        working-directory: /aliencity
         run: catalyst deploy --project ${{ secrets.CATALYST_PROJECT_NAME}} --org ${{ secrets.CATALYST_ORG}} --token ${{ secrets.CATALYST_TOKEN}}
