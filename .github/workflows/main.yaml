@@ -15,7 +15,5 @@ jobs:
           distribution: 'oracle'
       - name: Installing catalyst
         run : npm i -g zcatalyst-cli
-      - name: Installing Packages for 'Node'
-        run: cd functions/Node/ && npm install --omit=dev
       - name: Deploying code to catalyst
         run: catalyst deploy --project ${{ secrets.CATALYST_PROJECT_NAME}} --org ${{ secrets.CATALYST_ORG}} --token ${{ secrets.CATALYST_TOKEN}}
