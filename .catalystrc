@@ -1,0 +1,36 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "5874000000006001",
+      "name": "AlienCity",
+      "domain": {
+        "id": "10068406128",
+        "name": "aliencity-832316553.development"
+      },
+      "timezone": "Asia/Kolkata",
+      "env": [
+        {
+          "idx": 1,
+          "id": "832316553",
+          "name": "Development",
+          "type": 3
+        },
+        {
+          "idx": 2,
+          "id": "10068415894",
+          "name": "Production",
+          "type": 1
+        }
+      ]
+    }
+  ]
+}
