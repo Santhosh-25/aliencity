@@ -1,4 +1,4 @@
-version: 1.0
+version: 1
 jobs:
   hello:
     steps:
@@ -9,9 +9,19 @@ jobs:
   hello-world:
     steps:
       - echo "Hello World!"
+  test:
+    runner: test
+    steps:
+      - echo "From test job"
 stages:
   - name: build
     jobs:
       - - hello
         - world
       - hello-world
+  - name: test
+    jobs:
+      - test
+runners:
+  test:
+    config-id: 2
