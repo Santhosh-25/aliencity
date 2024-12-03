@@ -14,16 +14,18 @@ jobs:
     runner: test
     steps:
       - echo "From test job"
-
+  catalyst:
+    runner: test
+    steps:
+      - npm install zcatalyst-cli
+      - catalyst deploy
 stages:
-  - name: build
+  - name: catalyst
     jobs:
       - - hello
         - world
       - hello-world
-  - name: test
-    jobs:
-      - test
+
 runners:
   test:
     config-id: 2
