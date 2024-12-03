@@ -18,13 +18,13 @@ jobs:
     runner: test
     steps:
       - npm install zcatalyst-cli
+      - catalyst --version
       - catalyst deploy
 stages:
   - name: catalyst
     jobs:
       - - hello
         - world
-      - hello-world
 
 runners:
   test:
