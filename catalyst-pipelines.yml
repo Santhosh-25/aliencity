@@ -5,7 +5,8 @@ jobs:
       - echo "Hello"
   world:
     steps:
-      - echo "World"
+      - npm install zcatalyst-cli
+      - catalyst deploy
   hello-world:
     steps:
       - echo "Hello World!"
@@ -13,6 +14,7 @@ jobs:
     runner: test
     steps:
       - echo "From test job"
+
 stages:
   - name: build
     jobs:
