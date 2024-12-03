@@ -5,7 +5,7 @@ jobs:
       - echo "Hello"
   world:
     steps:
-      - npm install zcatalyst-cli
+      - npm install zcatalyst-cli@latest
       - catalyst --version
       - catalyst deploy
   hello-world:
