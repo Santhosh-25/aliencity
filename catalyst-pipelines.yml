@@ -24,8 +24,7 @@ jobs:
 stages:
   - name: catalyst
     jobs:
-      - - hello
-        - world
+      - catalyst
 
 runners:
   test:
