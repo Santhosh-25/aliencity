@@ -6,6 +6,7 @@ jobs:
   world:
     steps:
       - npm install zcatalyst-cli
+      - catalyst --version
       - catalyst deploy
   hello-world:
     steps:
