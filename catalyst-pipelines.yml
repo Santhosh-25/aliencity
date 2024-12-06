@@ -2,7 +2,7 @@ version: 1
 jobs:
   hello:
     steps:
-      - echo "Hello"
+      - echo `catalyst deploy --project '<< env.PROJECT_ID >>'`
   world:
     steps:
       - npm install zcatalyst-cli@latest
@@ -25,7 +25,8 @@ stages:
   - name: catalyst
     jobs:
       - catalyst
-
 runners:
   test:
     config-id: 2
+variables:
+  PROJECT_ID: PROJECT_ID
